@@ -1,1 +1,1 @@
-web: gunicorn HOME.wsgi --log-file -
+web: gunicorn unti_discrimination.wsgi --log-file -
