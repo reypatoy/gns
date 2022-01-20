@@ -1,0 +1,40 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block title %}
+<title>Gender Gap</title>
+{% endblock %}
+           
+{% block content %}
+    <div>
+        <div class="container-fluid">
+            <div class="row">
+                    <div class="col-md-6 col-sm-12" style="padding: 1px;">
+                        <img  class="img-fluid" src="{% static 'images/gender.png' %}" alt="">
+                    </div>
+                    <div class="col-md-6 col-sm-12 text-center" style="padding-right: 20px;"><br>           
+                        <p style="font-size: 24px; text-align: justify;">
+                            The Philippines remains the top country in Asia in terms of 
+                            closing the gender gap, according to the Global Gender Gap 
+                            Report 2020 of the World Economic Forum. <br><br>
+
+                            The report shows that the Philippines has closed 78% of its 
+                            overall gender gap, garnering a score of 0.781 (down by 1.8 
+                            percentage points from .799 in 2019). With this, it ranked 
+                            16th out of 153 countries with the narrowest gap between men 
+                            and women, dropping by 8 notches from its place last year.
+                            <br><br>
+                            Notably, it remains as the sole Asian country that made it to 
+                            the top twenty tier; followed by Lao People’s Democratic 
+                            Republic which ranked 43rd.
+                            <br><br>
+                            The Global Gender Gap Report 2020 measured countries on 
+                            their progress towards gender parity in four dimensions: 
+                            economic participation and opportunity, educational attainment,
+                             health and survival, and political empowerment.
+                        </p> 
+                    </div>
+            </div>
+            
+        </div>
+    </div>
+{% endblock %}

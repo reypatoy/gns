@@ -8,4 +8,6 @@ app_name = "pages"
 
 urlpatterns = [
     path("", views.home_view, name="home"),
+    path("GenderGap/", views.genderGap, name="genderGap"),
+    path("AboutUs/", views.aboutUs, name="aboutUs"),
 ]

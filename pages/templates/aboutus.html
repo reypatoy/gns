@@ -1,0 +1,73 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block title %}
+<title>About Us</title>
+{% endblock %}
+           
+{% block content %}
+    <div>
+        <div>
+            <img style="width: 100%;"  class="img-fluid" src="{% static 'images/oroquieta.jpg' %}" alt="">
+        </div>
+        <div class="container-fluid" style="padding: 20px;">
+            <p style="font-size: 24px; text-align: justify;">
+                Oroquieta was called before as Layawan. 
+                The now city was then a barrio in the province of Misamis since 1861 
+                to 1879. The early settlers were Boholano peddlers. 
+                Since much of the animals can be found along the river, 
+                the named the place Layawan, which means place of many stray animals.
+                <br><br>
+                After some years, Misamis was divided into two provinces, 
+                Misamis Occidental and Misamis Oriental. In 1880, Layawan converted 
+                into a town and the name of the place was changed to Oroquieta. 
+                Some folks say that the the place was named after the famous 
+                barrio in Spain where Father Toas Tomas Casado, the first 
+                parish priest and General Domingo Mariones y Murillo, a hero 
+                in the battle of Oroquieta, were born.
+                <br><br>
+                Many years had passed, Oroquieta progressed by leaps and bounds 
+                until finally it became the capital town (cabecera) on January 6, 
+                1930. As capital town, people of various neighboring provinces came
+                 and inhabited in the place where they earn their living through 
+                 fishing, farming, merchandising and other forms of businesses. 
+                 Soon afterwards its income increased simultaneously with increase 
+                 in population.
+            </p>
+        </div>
+        <div class="container text-center" id="ContactUs"><br>
+            <h1>Contact Us</h1><br>
+            <p style="font-size: 24px;">
+                If you have some issues about gender equality, 
+                please don't hesitate to email us
+                @ oroquieta.genderanddevelopment@gmail.com
+                or call/text us at 09232232326<br>
+            </p><br>
+            <p style="font-size: 24px;">
+                You can also send a direct message in our site
+                by just filling the fields below
+            </p>
+            <form class="col-md-6 col-sm-12 offset-3 border border-1" style="padding: 20px;" action="#">
+                <div class="mb-3 row">
+                    <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+                    <div class="col-sm-10">
+                      <input type="email" class="form-control" required id="staticEmail" placeholder="email@example.com">
+                    </div>
+                  </div>
+                  <div class="mb-3 row">
+                    <label for="" class="col-sm-2 col-form-label">Message</label>
+                    <div class="col-sm-10">
+                      <input type="text" required class="form-control" id="">
+                    </div>
+                  </div>
+                  <div class="mb-3 row">
+                    <label for="" class="col-sm-2 col-form-label"></label>
+                    <div class="col-sm-10">
+                        <input type="submit"  class="form-control btn btn-secondary" value="Submit" id="">
+                      </div>
+                    
+                  </div>
+                  
+            </form><br><br>
+        </div>
+    </div>
+{% endblock %}
