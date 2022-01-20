@@ -1,0 +1,203 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <title>Home</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <div class="container">
+                <h1>
+                    Gender and Development of LGU Oroquieta
+                </h1>
+            </div>
+            
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#LGBTQIA+">LGBTQIA+</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled">Disabled</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="container-fluid">
+          <div class="row">
+                <div class="col-md-6 col-sm-12" style="padding: 1px;">
+                    <img  class="img-fluid" src="{% static 'images/Gender-equality.jpg' %}" alt="">
+                </div>
+                <div class="col-md-6 col-sm-12 text-center"><br>           
+                    <h3>Gender</h3> <br>  
+                    <p style="font-size: 24px; text-align: justify;">
+                        Refers to the set of roles and responsibilities 
+                        associated with being girl and boy or women and men, 
+                        and in some cultures a third or other gender
+                    </p> 
+                    <h3>Sex</h3> <br>  
+                    <p style="font-size: 24px; text-align: justify;">
+                        Refers to biological characteristics including genetics, 
+                        anatomy, and physiology that generally define humans as 
+                        female and male. These biological characteristics are not 
+                        mutually exclusive. However, there are individuals who possess both male and female characteristics
+                    </p> 
+                </div>
+          </div>
+          <!-- end of home -->
+          <!-- start of LGBTQIA+ -->
+          <div class="container-fluid" id="LGBTQIA+"><br>
+                <h2>
+                    The Existence of the LGBTQIA+ Community
+                </h2><br>
+                <p style="font-size: 24px; text-align: justify;">
+                    The third gender we talked about earlier includes Lesbian, 
+                    Gay, Bisexual, Transgender, Queer, Intersex, 
+                    Asexual and the plus. While there is no limit as 
+                    to what constitutes the “plus” in the community, 
+                    some have already been documented such as Pansexual, 
+                    Androgynous, Genderqueer, Two-spirit, Demisexual, and Polyamorous.
+                </p><br>
+                <div class="row" style="flex-direction: row; align-items: center;">
+                    <div class="col-md-6 col-sm-12">
+                        <p style="font-size: 24px; text-align: justify;">
+                            <span style="font-weight: bold;">Lesbian -</span>  The term for women who are sexually 
+                            and affectionately oriented towards other women. 
+                            However, the term can also be used to refer to 
+                            non-binary individuals who are attracted to women 
+                            or feel connected to womanhood
+                        </p>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <img class="img-fluid" style="width: 100%;" src="{% static 'images/lesbian.jpg' %}" alt="">
+                    </div>
+                </div><br>
+                <div class="row" style="flex-direction: row; align-items: center;">
+                    <div class="col-md-6 col-sm-12">
+                        <p style="font-size: 24px; text-align: justify;">
+                            <span style="font-weight: bold;">Gay -</span>  
+                            The term used to refer to men or men-aligned 
+                            individuals who are attracted to people of 
+                            the same/similar gender. However, lesbians 
+                            can also be referred to as gay. Bisexual and 
+                            pansexual people sometimes use gay to casually 
+                            refer to themselves when they talk about their 
+                            similar gender attraction.
+                        </p>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <img class="img-fluid" style="width: 100%;" src="{% static 'images/gay.jpg' %}" alt="">
+                    </div>
+                </div><br>
+                <div class="row" style="flex-direction: row; align-items: center;">
+                    <div class="col-md-6 col-sm-12">
+                        <p style="font-size: 24px; text-align: justify;">
+                            <span style="font-weight: bold;">Bisexual -</span>  
+                            It used to indicate an attraction to all genders. 
+                            The prefix “bi” is used because back then, 
+                            there were only two genders, and that was 
+                            already considered as all the genders. 
+                            The recognition of bisexual individuals 
+                            is important since there have been periods 
+                            when people who identify as bisexuals have 
+                            been misunderstood as being gay. It has also 
+                            included transgender, binary and nonbinary 
+                            individuals (not to be confused with pansexuals) 
+                            since the release of the “Bisexual Manifesto” in 1990.
+                        </p>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <img class="img-fluid" style="width: 100%;" src="{% static 'images/biplus.jpg' %}" alt="">
+                    </div>
+                </div><br>
+                <div class="row" style="flex-direction: row; align-items: center;">
+                    <div class="col-md-6 col-sm-12">
+                        <p style="font-size: 24px; text-align: justify;">
+                            <span style="font-weight: bold;">Trans - </span>  
+                            There are two types of trans people: Transexual – 
+                            can mean someone transitioning from one sex to another 
+                            using surgery or medical treatments. However, this term 
+                            has fallen out of favor for trans or transgender. 
+                            Transgender – a term for someone that identifies 
+                            as a different gender than what was assigned on 
+                            one’s birth certificate. They have a gender that 
+                            is different from what the adults assumed by looking 
+                            at their body when they were born.
+                        </p>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <img class="img-fluid" style="width: 100%;" src="{% static 'images/trans.jfif' %}" alt="">
+                    </div>
+                </div><br>
+                <div class="row" style="flex-direction: row; align-items: center;">
+                    <div class="col-md-6 col-sm-12">
+                        <p style="font-size: 24px; text-align: justify;">
+                            <span style="font-weight: bold;">Queer - </span>  
+                            It is a term used to describe sexual and gender 
+                            identities other than straight and cisgender. 
+                            Lesbian, gay, bisexual, and transgender people 
+                            may all identify with the word queer. It is 
+                            sometimes used to express that sexuality and 
+                            gender can be complicated, change over time, 
+                            and might not fit neatly into either/or identities, 
+                            like male or female, gay or straight. 
+                            Cisgender – denoting or relating to a 
+                            person whose sense of personal identity 
+                            and gender corresponds with their birth sex.
+                        </p>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <img class="img-fluid" style="width: 100%;" src="{% static 'images/queer.jpg' %}" alt="">
+                    </div>
+                </div><br>
+                <div class="row" style="flex-direction: row; align-items: center;">
+                    <div class="col-md-6 col-sm-12">
+                        <p style="font-size: 24px; text-align: justify;">
+                            <span style="font-weight: bold;">Intersex - </span>  
+                            Intersex people are born with differences in their chromosomes, 
+                            genitals, or reproductive anatomy, compared to the usual two ways 
+                            that bodies develop. Most children with intersex anatomy, 
+                            regardless of how their bodies look, are raised in either 
+                            male or female gender roles. And many intersex people do 
+                            grow up with a gender identity that aligns with how 
+                            they were raised: male or female. This means that intersex 
+                            people can be cisgender. Intersex people may also grow up 
+                            to realize that the gender they were raised as was wrong 
+                            for them. In this way, a person can be both intersex and transgender.
+                        </p>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <img class="img-fluid" style="width: 100%;" src="{% static 'images/intersex.jfif' %}" alt="">
+                    </div>
+                </div><br>
+          </div>
+      </div>
+      <div class="container" style="height: 150px;">
+
+      </div>
+</body>
+</html>
