@@ -9,17 +9,20 @@ import os
 
 @api_view(['POST'])
 def sms(request):
+    responseData = None
     toNumber = request.data['to']
+    numbers = toNumber.split(',')
     text = request.data['text']
-    client = vonage.Client(key="f0c06dc3", secret="Hh1rFYeJuqMq7iXG")
-    sms = vonage.Sms(client)
-    responseData = sms.send_message(
-        {
-            "from": "+14254752924",
-            "to": toNumber,
-            "text": text,
-        }
-    )
+    sms_client = vonage.Client(key="f0c06dc3", secret="Hh1rFYeJuqMq7iXG")
+    sms = vonage.Sms(sms_client)
+    for number in numbers:
+        responseData = sms.send_message(
+            {
+                "from": "+14254752924",
+                "to": number,
+                "text": text,
+            }
+        )
 
     if responseData["messages"][0]["status"] == "0":
         return Response({'status': 'ok'}, status=status.HTTP_200_OK)
@@ -40,7 +43,7 @@ def email(request):
 
     api_key = '6d922bbc6a50f716bf403a751852a61d'
     api_secret = '354614009dc1dac05a4dc4816f7498bf'
-    mailjet = Client(auth=(api_key, api_secret), version='v3.1')
+    mailjet = Client(auth=(api_key, api_secret))
     data = {
         'Messages': [
             {
