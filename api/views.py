@@ -9,21 +9,17 @@ import os
 
 @api_view(['POST'])
 def sms(request):
-    responseData = None
     toNumber = request.data['to']
-    numbers = toNumber.split(',')
     text = request.data['text']
     sms_client = vonage.Client(key="f0c06dc3", secret="Hh1rFYeJuqMq7iXG")
     sms = vonage.Sms(sms_client)
-    for number in numbers:
-        responseData = sms.send_message(
-            {
-                "from": "+14254752924",
-                "to": number,
-                "text": text,
-            }
-        )
-
+    responseData = sms.send_message(
+        {
+            "from": "+14254752924",
+            "to": toNumber,
+            "text": text,
+        }
+    )
     if responseData["messages"][0]["status"] == "0":
         return Response({'status': 'ok'}, status=status.HTTP_200_OK)
     else:
