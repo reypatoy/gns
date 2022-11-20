@@ -4,6 +4,7 @@ from rest_framework.response import Response
 from rest_framework import status
 import vonage
 from mailjet_rest import Client
+import time
 import os
 
 
@@ -23,6 +24,7 @@ def sms(request):
                 "text": text,
             }
         )
+        time.sleep(10)
 
     if responseData["messages"][0]["status"] == "0":
         return Response({'status': 'ok'}, status=status.HTTP_200_OK)
