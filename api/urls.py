@@ -4,6 +4,6 @@ from . import views
 app_name = "api"
 
 urlpatterns = [
-    path("", views.sms, name="sms"),
+    path("sms/", views.sms, name="sms"),
     path("emails/", views.email, name="email"),
 ]
