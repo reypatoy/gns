@@ -12,31 +12,19 @@ import requests
 def sms(request):
     toNumber = request.data['recipient']
     text = request.data['message']
-    client_id = "f29aaa8f-d5fe-474c-b7ec-e7fbad79fe57"
-    client_secret = "8d7OT14hv7MQxWrQcADomiPSjeBqRoiVBJqx9gEZ"
-    response = requests.post("https://api.sms.fortres.net/v1/messages", auth=(client_id, client_secret), data={
-        "recipient": toNumber,
-        "message": text
-    })
-
-    if response.status_code == 200:
+    sms_client = vonage.Client(key="f20098bc", secret="e4RPKVZlwEJx53bE")
+    sms = vonage.Sms(sms_client)
+    responseData = sms.send_message(
+        {
+            "from": "+639565283327",
+            "to": toNumber,
+            "text": text,
+        }
+    )
+    if responseData["messages"][0]["status"] == "0":
         return Response({'status': 'ok'}, status=status.HTTP_200_OK)
     else:
         return Response({'status': 'Not Acceptable'}, status=status.HTTP_406_NOT_ACCEPTABLE)
-
-    # sms_client = vonage.Client(key="f0c06dc3", secret="Hh1rFYeJuqMq7iXG")
-    # sms = vonage.Sms(sms_client)
-    # responseData = sms.send_message(
-    #     {
-    #         "from": "+14254752924",
-    #         "to": toNumber,
-    #         "text": text,
-    #     }
-    # )
-    # if responseData["messages"][0]["status"] == "0":
-    #     return Response({'status': 'ok'}, status=status.HTTP_200_OK)
-    # else:
-    #     return Response({'status': 'Not Acceptable'}, status=status.HTTP_406_NOT_ACCEPTABLE)
 
 
 @api_view(['POST'])
@@ -50,9 +38,9 @@ def email(request):
     totalPayed = request.data['payed']
     penalty = request.data['penalty']
 
-    api_key = '6d922bbc6a50f716bf403a751852a61d'
-    api_secret = '354614009dc1dac05a4dc4816f7498bf'
-    mailjet = Client(auth=(api_key, api_secret))
+    api_key = '1afdfa69d12ff3319b3b9ce17abeedbc'
+    api_secret = '309be1056d38f5eb2913b6fbfe5ca47b'
+    mailjet = Client(auth=(api_key, api_secret), version='v3.1')
     data = {
         'Messages': [
             {
